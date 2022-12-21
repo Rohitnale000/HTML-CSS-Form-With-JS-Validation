@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="" method="post" id="form">
+        <h1 class="h1">Form Design</h1>
+        <input
+          class="textbox"
+          type="text"
+          placeholder="First Name" 
+          id="firstName"
+          onkeyup="manage(this)"
+          
+        /> <span>*</span>
+        <input
+          class="textbox"
+          type="text"
+          placeholder="Last Name"
+          id="lastName"
+          onkeyup="manage(this)"
+        />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="textbox"
+          placeholder="Password"
+          id="password"
+          onkeyup="manage(this)"
+        /><span>*</span>
+        <input
+          type="password"
+          name="confirmPassword"
+          id="confirmPassword"
+          class="textbox"
+          placeholder="Confirm Password"
+          onkeyup="manage(this)"
+        /><span>*</span>
+        <textarea
+          name="message"
+          class="textbox"
+          placeholder="Enter Note"
+          rows="4"
+          cols="50"
+          id="note"
+          onkeyup="manage(this)"
+        ></textarea>
+      </form>
+      <div class="container-4x">
+        <input
+          type="button"
+          value="Submit"
+          id="submit"
+          name="submit"
+          class="submit"
+          onclick="formValidation()"
+          disabled
+        />
+        <input
+          type="button"
+          value="Reset"
+          name="reset"
+          class="submit"
+          onclick="Reset();"
+        />
+       
+      </div>
+    </div>
+    <script src="./JS/services.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <div id="snackbar">Name should not be empty/ Name should contain only alphabets</div>
+    <div id="snackbar1">password and conform password are not matching</div>
+    <div id="snackbar2">Password must contain at least one lowercase,uppercase,number & special letter</div>
+    <div id="snackbar3">Record Save Successfully...</div>
+  </body>
+</html>
